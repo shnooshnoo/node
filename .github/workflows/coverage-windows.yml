@@ -25,6 +25,8 @@ on:
       - tools/test.py
       - .github/workflows/coverage-windows.yml
 
+  workflow_dispatch:
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
